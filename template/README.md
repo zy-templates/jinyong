@@ -1,14 +1,6 @@
-# react-webpack-pc
-这是一款基于webpack构建的react项目模板,可以使用我自己写的脚手架工具[asuna-cli](https://github.com/ruichengping/asuna-cli)进行构建，所以不能直接git clone下来直接运行，需要做一下修改。
-
-![package.json](https://user-gold-cdn.xitu.io/2018/8/17/16546fe2082983a3?w=1834&h=594&f=jpeg&s=158191)
-
-package.json中上图红色边框里的部分需要修改一下，不然运行会报 <Invalid name: "{{name}}>"的错误。
-
-## 项目结构
-![项目结构](https://user-gold-cdn.xitu.io/2018/8/17/16546fd9debd8473?w=546&h=654&f=jpeg&s=44641)
-
-> 以上是示例项目的目录结构，下面我们将逐一进行分析**
+# react-webpack
+~ npm run mock 
+~ npm start
 ## build
 这个文件主要放了一些与webpack打包的相关文件。
 - **build.js** ---- webpack打包脚本，用于构建生产环境的包
@@ -18,7 +10,7 @@ package.json中上图红色边框里的部分需要修改一下，不然运行�
 - **webpack.dev.conf.js** ---- 开发环境的webpack配置
 - **webpack.prod.conf.js** ---- 生产环境的webpack配置
 
-这个项目的webpack配置我是在vue-cli的项目上进行修改的，可以用于React的项目构建。目前只要开发环境和生产环境这两个环境，可能一些公司有多个环境，每个环境下webpack的配置还不同，此时可以根据不同环境建一个文件名格式为“**webpack.<环境名>.conf.js**”的webpack配置使用。**webpack.base.conf.js**里面有一些基本配置比如**rules**、**input**、**output**的等配置，一般来说每个环境下这些大致都是相同，一些不同之处可以用**webpack-merge**插件进行合并。一般来说大多数项目来说开发环境和生产环境两个webpack配置足够了。
+这个项目的webpack配置我是在zuiyou-cli的项目上进行修改的，可以用于React的项目构建。目前只要开发环境和生产环境这两个环境，可能一些公司有多个环境，每个环境下webpack的配置还不同，此时可以根据不同环境建一个文件名格式为“**webpack.<环境名>.conf.js**”的webpack配置使用。**webpack.base.conf.js**里面有一些基本配置比如**rules**、**input**、**output**的等配置，一般来说每个环境下这些大致都是相同，一些不同之处可以用**webpack-merge**插件进行合并。一般来说大多数项目来说开发环境和生产环境两个webpack配置足够了。
 ## config
 这里存放着不同环境webpack所需要的配置参数。
 - **dev.env.js** ---- 向外暴露开发环境下的环境变量**NODE_ENV**
